@@ -92,45 +92,27 @@ import { YouTube } from "astro-embed";
                 <a>Learn more about us, and how to join the team</a>
             </div>
 
-            <div class="mini-timeline">
-                <div class="timeline-step active">
-                    <span class="step-dot"></span>
-                    <div class="step-content">
-                        <span class="step-date">Now</span>
-                        <h3>Recruitment</h3>
-                        <p>
-                            Recruiting students, mentors, and sponsors across
-                            Colombo.
-                        </p>
-                    </div>
-                </div>
+            <Timeline>
+                <TimelineItem date="Now" title="Recruitment" active>
+                    Recruiting students, mentors, and sponsors across Colombo.
+                </TimelineItem>
 
-                <div class="timeline-step">
-                    <span class="step-dot"></span>
-                    <div class="step-content">
-                        <span class="step-date">9th Jan 2027</span>
-                        <h3>BIOCORE Kickoff & Build Season</h3>
-                        <p>
-                            Global game reveal followed by an 8-week sprint to
-                            design, build, and program our robot for
-                            competition.
-                        </p>
-                    </div>
-                </div>
+                <TimelineItem
+                    date="9th Jan 2027"
+                    title="BIOCORE Kickoff & Build Season"
+                >
+                    Global game reveal followed by an 8-week sprint to design,
+                    build, and program our robot for competition.
+                </TimelineItem>
 
-                <div class="timeline-step">
-                    <span class="step-dot"></span>
-                    <div class="step-content">
-                        <span class="step-date">12-14th March 2027</span>
-                        <h3>Southern Cross Regional - Sydney</h3>
-                        <p>
-                            Travelling to Sydney and putting our season's work
-                            to the test, representing Sri Lanka on the global
-                            stage.
-                        </p>
-                    </div>
-                </div>
-            </div>
+                <TimelineItem
+                    date="12-14th March 2027"
+                    title="Southern Cross Regional — Sydney"
+                >
+                    Travelling to Sydney and putting our season's work to the
+                    test, representing Sri Lanka on the global stage.
+                </TimelineItem>
+            </Timeline>
         </div>
     </section>
 </BaseLayout>
@@ -207,65 +189,5 @@ import { YouTube } from "astro-embed";
 
     #hero-text h2 {
         margin-bottom: 2rem;
-    }
-
-    .mini-timeline {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        padding-left: 1.75rem;
-        gap: 1.75rem;
-    }
-
-    .mini-timeline::before {
-        content: "";
-        position: absolute;
-        left: 6px;
-        top: 8px;
-        bottom: 8px;
-        width: 2px;
-        background: rgba(255, 255, 255, 0.15);
-    }
-
-    .timeline-step {
-        position: relative;
-    }
-
-    .step-dot {
-        position: absolute;
-        left: -1.75rem;
-        top: 5px;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        background: var(--carbon);
-        border: 2px solid var(--cinnabar);
-    }
-
-    .timeline-step.active .step-dot {
-        background: var(--cinnabar);
-        box-shadow: 0 0 0 4px rgba(171, 49, 45, 0.25);
-    }
-
-    .step-date {
-        display: inline-block;
-        font-size: 0.8rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: var(--cinnabar-hover);
-        margin-bottom: 0.2rem;
-    }
-
-    .step-content h3 {
-        font-size: 1.15rem;
-        margin-bottom: 0.25rem;
-        color: var(--white);
-    }
-
-    .step-content p {
-        font-size: 0.95rem;
-        color: var(--text-muted);
-        margin: 0;
     }
 </style>
