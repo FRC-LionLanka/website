@@ -30,13 +30,48 @@ import Navbar from "../components/navbar.astro";
         <main>
             <slot />
         </main>
+
+        <footer>
+            <div id="footer-content">
+                <p>Lion Lanka</p>
+                <div id="footer-socials">
+                    <a
+                        href="https://www.instagram.com/frc_lionlanka/"
+                        class="lab la-instagram"
+                    ></a>
+                    <a href="mailto:enquiries@lionlanka.lk">
+                        enquries@lionlanka.lk <i class="las la-share"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
 
+<style>
+    #footer-content {
+        display: flex;
+        flex-direction: row;
+        max-width: 1250px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    #footer-socials {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    #footer-socials a {
+        text-decoration: none;
+    }
+</style>
 <style is:global>
     :root {
         --carbon: #141414;
-        --card-bg: #242424;
+        --soot: #242424;
         --cinnabar: #ab312d;
         --cinnabar-hover: #cf3d38;
         --white: #f8f9fa;
@@ -76,7 +111,7 @@ import Navbar from "../components/navbar.astro";
         flex-direction: column;
         row-gap: 1rem;
         padding-bottom: 2rem;
-        border-bottom: 2px solid var(--card-bg);
+        border-bottom: 2px solid var(--soot);
     }
 
     section:last-of-type {
@@ -115,16 +150,17 @@ import Navbar from "../components/navbar.astro";
     }
 
     header {
-        background-color: var(--card-bg);
+        background-color: var(--soot);
         padding: 0.5rem 1.5rem;
-        position: sticky; top: 0;
+        position: sticky;
+        top: 0;
         z-index: 1;
     }
 
     footer {
         text-align: center;
         padding: 1rem;
-        background: var(--card-bg);
+        background: var(--soot);
         color: var(--text-muted);
         font-size: 0.9rem;
     }
