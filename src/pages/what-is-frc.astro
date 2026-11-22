@@ -81,8 +81,8 @@ import TimelineItem from "../components/timeline-item.astro";
 
     <section id="get-involved">
         <h2>Getting Involved</h2>
-        <div class="involvement-grid">
-            <div class="involvement-card">
+        <div class="info-grid">
+            <div class="info-card">
                 <h3>
                     <i class="las la-user-graduate"></i> Students
                 </h3>
@@ -93,7 +93,7 @@ import TimelineItem from "../components/timeline-item.astro";
 
                 <a>Apply to join →</a>
             </div>
-            <div class="involvement-card">
+            <div class="info-card">
                 <h3>
                     <i class="las la-rocket"></i> Sponsors
                 </h3>
@@ -104,7 +104,7 @@ import TimelineItem from "../components/timeline-item.astro";
 
                 <a>Partner with us →</a>
             </div>
-            <div class="involvement-card">
+            <div class="info-card">
                 <h3>
                     <i class="las la-chalkboard-teacher"></i> Mentors
                 </h3>
@@ -120,40 +120,11 @@ import TimelineItem from "../components/timeline-item.astro";
 </BaseLayout>
 
 <style>
+    #hero {
+        max-width: 1230px;
+    }
     #hero h1 {
         align-self: center;
         margin-bottom: 2rem;
-    }
-
-    .involvement-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 5%;
-    }
-
-    .involvement-card {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        border-left: 3px solid var(--steelazure);
-        padding: 0.5rem 1rem;
-        padding-right: 0;
-
-
-        justify-content: space-between;
-    }
-
-    .involvement-card p {
-        color: var(--text-muted);
-    }
-
-    .involvement-card a {
-        color: var(--cinnabar);
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .involvement-card a:hover{
-        color: var(--cinnabar-hover)
     }
 </style>
