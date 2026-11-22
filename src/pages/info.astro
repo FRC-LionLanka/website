@@ -1,0 +1,127 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+    <section id="hero">
+        <h1>About Us</h1>
+        <p>
+            <strong>Lion Lanka (FRC #12560)</strong> is Sri Lanka's pioneering
+            FIRST Robotics Competition team. Based at Elk Arc, Kotte, we bring
+            together highschool students from across the city to compete at the
+            forefront of youth robotics, guided by industry mentors.
+            <br />
+            <br />
+            An independent community team rather than a school-club, we enable
+            ambitious students to gain hands-on experience, regardless of what
+            their school offers.
+        </p>
+    </section>
+
+    <section id="logistics">
+        <h2>Season Commitments</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Build Season (Jan - March)</h3>
+                <p>
+                    Intensive weekly sessions (~10-15 hrs/week). Exact schedule
+                    is being finalised and will be updated here soon. Students
+                    are expected to come in as often as possible
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Off Season (April - December)</h3>
+                <p>
+                    Once/twice a week to further improve the robot, prepare for
+                    next year's season, and explore other responsibilities.
+                    Students are still expected to commit appropriately.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team-location">
+        <h2>Workshop Location</h2>
+        <div class="subtitled-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3961.003040620523!2d79.9042969!3d6.8902379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25b7a6bb38fb3%3A0x44654dd49ae84b91!2sElk%20Arc%20Machine%20Works%20Pvt%20Ltd!5e0!3m2!1sen!2slk!4v1795376075724!5m2!1sen!2slk"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                class="content-container"
+                id="map-embed"
+            ></iframe>
+            <p class="subtitle">
+                Elk Arc Machine Works 5 Baddegana Rd, Sri Jayawardenepura Kotte 10100
+            </p>
+        </div>
+    </section>
+    <section id="team-roles">
+        <h2>Team Roles</h2>
+        <div id="roles-grid" class="info-grid">
+            <div class="info-card">
+                <h3>
+                    <i class="las la-pencil-ruler"></i> Design
+                </h3>
+                <p>
+                    Transforming ideas to tangible models. Through industry
+                    standard software, students learn to engineer effectively
+                    before parts are ever touched.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>
+                    <i class="las la-wrench"></i> Mechanical
+                </h3>
+                <p>
+                    Constructing of the physical robot. With hands-on experience
+                    with 3D printing, CNC routers, and lathes, aspiring
+                    engineers learn practical skills from day one.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>
+                    <i class="las la-terminal"></i> Controls
+                </h3>
+                <p>
+                    Giving the machine brains. Interacting with the robot
+                    through Python, students use sensor data and actuators to
+                    make the robot battle-ready in the hands of a driver.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>
+                    <i class="las la-bullhorn"></i> Outreach
+                </h3>
+                <p>
+                    Keeping the team alive across seasons. Learning networking
+                    and promotional skills, students manage sponsorships,
+                    community outreach, and recruitment.
+                </p>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    #hero {
+        max-width: 1230px;
+    }
+
+    #hero h1 {
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+
+    #roles-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1.5rem;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #map-embed {
+        height: 17rem;
+    }
+</style>
