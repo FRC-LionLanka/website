@@ -1,0 +1,146 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import { Image } from "astro:assets";
+import elkArcLogo from "../assets/elkarc.png";
+---
+
+<BaseLayout>
+    <section id="hero">
+        <h1>Sponsor the Next Generation</h1>
+        <p>
+            Participating at the front of youth robotics takes significant
+            resources, but the return on investment is undeniable. By parterning
+            with us, you help inspire young people to pursue skills you company
+            needs, shaping the next generation.
+        </p>
+    </section>
+
+    <section id="current-sponsors">
+        <h2>Current Sponsors & Partners</h2>
+        <p class="muted">
+            Lion Lanka thanks all our founding sponsors for their generous
+            support in helping bring FIRST Robotics to Sri Lanka.
+        </p>
+        <div id="sponsors-grid">
+            <a class="sponsor-card">
+                <Image src={elkArcLogo} alt="Elk Arc Logo" />
+            </a>
+        </div>
+    </section>
+
+    <section id="how-to-help">
+        <h2>How You Can Support Us</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>
+                    <i class="las la-hand-holding-usd"></i> Financial Grants
+                </h3>
+                <p>
+                    Financial support directly funds our international
+                    registration, essential hardware, and travel costs. Your
+                    support gives us security to keep our mission going.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>
+                    <i class="las la-tools"></i> Materials and Tooling
+                </h3>
+                <p>
+                    The industrial robots FRC calls for require precision parts
+                    and materials. We welcome partners who can support us with
+                    raw material stock, tooling or machines.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>
+                    <i class="las la-chalkboard-teacher"></i> Technical
+                    Mentorship
+                </h3>
+                <p>
+                    No team can exist without guidance from those in the field.
+                    By investing your time and expertise, you help shape a
+                    direct pipeline of future talent for your industry.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsor-recognition">
+        <h2>Partner Recognition</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>
+                    <i class="las la-globe"></i> International Visibility
+                </h3>
+                <p>
+                    Your company logo featured on our competition robot,
+                    website, and more as we represent Sri Lanka on the front
+                    stage of youth robotics.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>
+                    <i class="las la-chalkboard-teacher"></i> Technical
+                    Mentorship
+                </h3>
+                <p>
+                    Direct association with Sri Lanka's founding FRC team,
+                    workshop visits, and the opportunity to connect early with
+                    driven young engineers and developers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ready-to-partner">
+        <h2>Ready to Partner?</h2>
+        <p class="muted">
+            Reach out directly and we'll be happy to set up a quick introductory
+            call and discuss more about how you can support our journey. We
+            thank you for your generosity to STEM!
+        </p>
+        <a
+            href="mailto:enquiries@lionlanka.lk?subject=Sponsoring%20Lion%20Lanka%20(FRC%20%2312560)"
+            class="button-link sponsor-cta"
+        >
+            Email enquiries@lionlanka.lk →
+        </a>
+    </section>
+</BaseLayout>
+
+<style>
+    #hero {
+        max-width: 1230px;
+    }
+
+    #hero h1 {
+        align-self: center;
+    }
+
+    #sponsors-grid {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+    }
+
+    .sponsor-card {
+        background-color: var(--white);
+        border: 5px solid var(--steelazure);
+        border-radius: 8px;
+        padding: 2rem;
+        min-height: 160px;
+        max-height: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .sponsor-card img {
+        width: 100%;
+        height: auto;
+    }
+</style>
