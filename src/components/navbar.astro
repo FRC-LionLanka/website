@@ -8,9 +8,9 @@
     </div>
     <ul class="nav-links">
         <li><a href="/what-is-frc">What is FRC?</a></li>
-        <li><a href="/sponsors">Sponsor Us</a></li>
-        <li><a href="/join">Join the Team</a></li>
         <li><a href="/info">About Us</a></li>
+        <li><a href="/sponsors">Sponsors</a></li>
+        <li><a href="/join">Join</a></li>
     </ul>
 </nav>
 
@@ -42,7 +42,13 @@
         justify-content: space-between;
         gap: 1rem;
         list-style: none;
+        padding: 0;
     }
+
+    .nav-links > li {
+        padding: 0; margin: 0;
+    }
+    
 
     .logo a {
         font-family: 'Space Grotesk';
@@ -53,6 +59,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
         }
         .hamburger-btn {
             display: flex;
@@ -71,6 +78,7 @@
         .nav-links.active {
             max-height: 300px;
             margin-top: 1.3rem;
+            width: 100%;
         }
 
         .nav-links li {
