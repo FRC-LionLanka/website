@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+    <section id="hero">
+        <h1>Join the Team</h1>
+    </section>
+    <section id="apply-section" class="two-col">
+        <div id="apply-info">
+            <div id="who-can-join">
+                <h2>Who can Join</h2>
+                <ul>
+                    <li>High school students (ages 14-18)</li>
+                    <li>Able to commute to our workshop at Elk Arc, Kotte</li>
+                    <li>
+                        Interested in design, mechanical, Python, or outreach
+                    </li>
+                    <li>
+                        Ready to commit ~10–15 hrs/week during Build Season
+                        (Jan–March)
+                    </li>
+                </ul>
+            </div>
+            <div id="not-a-student">
+                <h2>Not a Student?</h2>
+                <div class="strong-info-card">
+                    We are actively seeking adult mentors (engineering,
+                    software, business) and corporate sponsors to back our 2027
+                    season. Prior FRC experience is not required
+                    <br />
+                    <br />
+                    <div class="action-links">
+                        <a href="mailto:enquiries@lionlanka.lk">
+                            Contact for Mentorship →
+                        </a>
+                        <a href="/sponsors">Partner with us →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="registration-form" class="content-container">
+            <iframe
+                src="https://forms.gle/HdrbUEkiajfjmhZg8"
+                title="Lion Lanka Student Expression of Interest"
+            ></iframe>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    #hero {
+        max-width: 1230px;
+    }
+
+    #hero h1 {
+        align-self: center;
+    }
+    #registration-form {
+        min-height: 40em;
+    }
+
+    #who-can-join {
+    }
+
+    #apply-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    h2 {
+        margin-bottom: 0.8rem;
+    }
+
+    #not-a-student .action-links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    #not-a-student .action-links a {
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--cinnabar);
+    }
+
+    a:hover {
+        color: var(--cinnabar-hover);
+    }
+</style>
