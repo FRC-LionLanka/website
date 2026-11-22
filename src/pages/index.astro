@@ -1,5 +1,271 @@
 ---
+import { Image, getImage } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import teamLogoOutline from "../assets/logo-outlined.png";
+
+import heroBackground from "../assets/hero-background.jpeg";
+const processedHeroBackground = await getImage({
+    src: heroBackground,
+    format: "webp",
+});
+
+import { YouTube } from "astro-embed";
 ---
 
-<BaseLayout></BaseLayout>
+<BaseLayout>
+    <section
+        id="hero"
+        class="hero-layout"
+        style={`--hero-bg: url(${processedHeroBackground.src});`}
+    >
+        <div class="hero-inner">
+            <div class="hero-content two-col">
+                <div id="hero-text">
+                    <h1>Lion Lanka</h1>
+                    <h2 class="muted">FRC #12560</h2>
+                    <p>
+                        Sri Lanka’s founding FIRST Robotics Competition team. High school students competing on the global stage.
+                    </p>
+                </div>
+                <Image src={teamLogoOutline} alt="Team logo" height="400" />
+            </div>
+
+            <div class="button-group">
+                <a href="/join" class="button-link">
+                    Join the Team
+                </a>
+                <a href="/sponsor" class="button-link secondary-button">
+                    Sponsor our Goal
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="what-is-frc">
+        <h1>What is FRC?</h1>
+        <div class="two-col">
+            <div>
+                <ul>
+                    <li>
+                        FRC is the pinnacle of youth robotics. Where hands-on
+                        engineering meets varsity sports intensity.
+                    </li>
+                    <li>
+                        Each year between January and March, students design,
+                        build, and program a 50-kilogram robot to compete
+                        against others in international events.
+                    </li>
+                    <li>
+                        By doing so, students gain hands-on experience in
+                        engineering, programming, and teamwork. Vital to thrive
+                        in the modern-day world!
+                    </li>
+                </ul>
+                <br />
+                <a>Still curious? Check it out further!</a>
+            </div>
+            <YouTube
+                id="Jd29kzjclV0"
+                poster="src/assets/whatisfrc-cover-image.png"
+                class="content-container"
+            />
+        </div>
+    </section>
+
+    <section id="who-are-we">
+        <h1>Who are we?</h1>
+        <div class="two-col">
+            <div>
+                <ul>
+                    <li>
+                        We're the first (and only!) FRC team in Sri Lanka: Lion
+                        Lanka. Pioneering a new path for engineering-keen youth.
+                    </li>
+                    <li>
+                        Preparing for the 2027 Biocore season, we're looking for
+                        interested students, mentors, and sponsors to support
+                        our mission.
+                    </li>
+                </ul>
+                <br />
+                <a>Learn more about us, and how to join the team</a>
+            </div>
+
+            <div class="mini-timeline">
+                <div class="timeline-step active">
+                    <span class="step-dot"></span>
+                    <div class="step-content">
+                        <span class="step-date">Now</span>
+                        <h3>Recruitment</h3>
+                        <p>
+                            Recruiting students, mentors, and sponsors across
+                            Colombo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <span class="step-dot"></span>
+                    <div class="step-content">
+                        <span class="step-date">9th Jan 2027</span>
+                        <h3>BIOCORE Kickoff & Build Season</h3>
+                        <p>
+                            Global game reveal followed by an 8-week sprint to
+                            design, build, and program our robot for
+                            competition.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <span class="step-dot"></span>
+                    <div class="step-content">
+                        <span class="step-date">12-14th March 2027</span>
+                        <h3>Southern Cross Regional - Sydney</h3>
+                        <p>
+                            Travelling to Sydney and putting our season's work
+                            to the test, representing Sri Lanka on the global
+                            stage.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    #hero {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-top: -2rem;
+
+        background-image:
+            linear-gradient(rgba(20, 20, 20, 0.55), rgba(20, 20, 20, 0.75)),
+            var(--hero-bg);
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        padding-top: 3rem;
+        padding-bottom: 4.6vw;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+    }
+
+    .hero-content > img {
+        justify-self: end;
+    }
+    .hero-inner {
+        max-width: 1250px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* Dark overlay for text contrast */
+    .hero-bg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            rgba(20, 20, 20, 0.55),
+            rgba(20, 20, 20, 0.75)
+        );
+    }
+
+    .hero-bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .hero-inner {
+        position: relative;
+        z-index: 1;
+        max-width: 1250px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #hero-text {
+        margin: auto 0;
+        font-size: 1.3rem;
+        column-width: ;
+    }
+
+    #hero-text h1 {
+        font-size: 4rem;
+    }
+
+    #hero-text h2 {
+        margin-bottom: 2rem;
+    }
+
+    .mini-timeline {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-left: 1.75rem;
+        gap: 1.75rem;
+    }
+
+    .mini-timeline::before {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 8px;
+        bottom: 8px;
+        width: 2px;
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .timeline-step {
+        position: relative;
+    }
+
+    .step-dot {
+        position: absolute;
+        left: -1.75rem;
+        top: 5px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--carbon);
+        border: 2px solid var(--cinnabar);
+    }
+
+    .timeline-step.active .step-dot {
+        background: var(--cinnabar);
+        box-shadow: 0 0 0 4px rgba(171, 49, 45, 0.25);
+    }
+
+    .step-date {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--cinnabar-hover);
+        margin-bottom: 0.2rem;
+    }
+
+    .step-content h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.25rem;
+        color: var(--white);
+    }
+
+    .step-content p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        margin: 0;
+    }
+</style>
