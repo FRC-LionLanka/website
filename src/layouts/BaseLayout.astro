@@ -5,7 +5,7 @@ import Navbar from "../components/navbar.astro";
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content={Astro.generator} />
 
@@ -39,8 +39,12 @@ import Navbar from "../components/navbar.astro";
                         href="https://www.instagram.com/frc_lionlanka/"
                         class="lab la-instagram"
                     ></a>
+                    <a
+                        href="https://github.com/FRC-LionLanka"
+                        class="lab la-github"
+                    ></a>
                     <a href="mailto:enquiries@lionlanka.lk">
-                        enquries@lionlanka.lk <i class="las la-share"></i>
+                        enquiries@lionlanka.lk <i class="las la-share"></i>
                     </a>
                 </div>
             </div>
@@ -96,7 +100,7 @@ import Navbar from "../components/navbar.astro";
         padding: 2rem 1.5rem;
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 2.3rem;
         flex: 1;
         align-items: center;
     }
@@ -113,7 +117,7 @@ import Navbar from "../components/navbar.astro";
     section {
         display: flex;
         flex-direction: column;
-        row-gap: 1.75rem;
+        row-gap: 1.3rem;
         padding-bottom: 2rem;
         border-bottom: 2px solid var(--soot);
         width: 100%;
@@ -150,7 +154,7 @@ import Navbar from "../components/navbar.astro";
 
     a:hover {
         color: var(--cinnabar-hover);
-        text-decoration-color: var.site-header (--cinnabar-hover);
+        text-decoration-color: var(--cinnabar-hover);
         cursor: pointer;
     }
 
@@ -164,10 +168,16 @@ import Navbar from "../components/navbar.astro";
 
     footer {
         text-align: center;
-        padding: 1rem;
+        padding: 0.7rem 1.5rem;
         background: var(--soot);
         color: var(--text-muted);
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+        html {
+            font-size: 16px; /* Scales headings, body, and footer cleanly on phones */
+        }
     }
 
     .two-col {
@@ -234,7 +244,12 @@ import Navbar from "../components/navbar.astro";
     .info-grid {
         display: flex;
         gap: 5%;
-        flex
+    }
+
+    .strong-info-card {
+        border-left: 5px solid var(--cinnabar);
+        padding: 0.5rem 1rem;
+        padding-right: 0;
     }
 
     .info-card {
@@ -261,5 +276,16 @@ import Navbar from "../components/navbar.astro";
 
     .info-card a:hover {
         color: var(--cinnabar-hover);
+    }
+
+    @media (max-width: 768px) {
+        .two-col {
+            grid-template-columns: 1fr;
+            row-gap: 2rem;
+        }
+        .info-grid {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
     }
 </style>

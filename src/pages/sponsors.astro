@@ -10,9 +10,9 @@ import elkArcLogo from "../assets/elkarc.png";
         <h1>Sponsor the Next Generation</h1>
         <p>
             Participating at the front of youth robotics takes significant
-            resources, but the return on investment is undeniable. By parterning
-            with us, you help inspire young people to pursue skills you company
-            needs, shaping the next generation.
+            resources, but the return on investment is undeniable. By
+            partnerning with us, you help inspire young people to pursue skills
+            your company needs, shaping the next generation.
         </p>
     </section>
 
@@ -84,8 +84,8 @@ import elkArcLogo from "../assets/elkarc.png";
 
             <div class="info-card">
                 <h3>
-                    <i class="las la-chalkboard-teacher"></i> Technical
-                    Mentorship
+                    <i class="las la-chalkboard-teacher"></i> Tangible Community
+                    Impact
                 </h3>
                 <p>
                     Direct association with Sri Lanka's founding FRC team,
@@ -124,6 +124,7 @@ import elkArcLogo from "../assets/elkarc.png";
     #sponsors-grid {
         display: grid;
         grid-template-columns: 30% 30% 30%;
+        gap: 1.5rem;
     }
 
     .sponsor-card {
@@ -142,5 +143,11 @@ import elkArcLogo from "../assets/elkarc.png";
     .sponsor-card img {
         width: 100%;
         height: auto;
+    }
+
+    @media (max-width: 768px) {
+        #sponsors-grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>

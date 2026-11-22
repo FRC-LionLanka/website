@@ -10,6 +10,11 @@ const processedHeroBackground = await getImage({
     format: "webp",
 });
 
+import whatIsFrcCover from "../assets/whatisfrc-cover-image.png";
+
+import Timeline from "../components/timeline.astro";
+import TimelineItem from "../components/timeline-item.astro";
+
 import { YouTube } from "astro-embed";
 ---
 
@@ -25,7 +30,8 @@ import { YouTube } from "astro-embed";
                     <h1>Lion Lanka</h1>
                     <h2 class="muted">FRC #12560</h2>
                     <p>
-                        Sri Lanka’s founding FIRST Robotics Competition team. High school students competing on the global stage.
+                        Sri Lanka’s founding FIRST Robotics Competition team.
+                        High school students competing on the global stage.
                     </p>
                 </div>
                 <Image src={teamLogoOutline} alt="Team logo" height="400" />
@@ -35,7 +41,7 @@ import { YouTube } from "astro-embed";
                 <a href="/join" class="button-link">
                     Join the Team
                 </a>
-                <a href="/sponsor" class="button-link secondary-button">
+                <a href="/sponsors" class="button-link secondary-button">
                     Sponsor our Goal
                 </a>
             </div>
@@ -63,12 +69,13 @@ import { YouTube } from "astro-embed";
                     </li>
                 </ul>
                 <br />
-                <a>Still curious? Check it out further!</a>
+                <a href="/what-is-frc">Still curious? Check it out further!</a>
             </div>
             <div class="subtitled-container">
                 <YouTube
                     id="Jd29kzjclV0"
-                    poster="src/assets/whatisfrc-cover-image.png"
+                    poster={whatIsFrcCover.src}
+                    class="content-container"
                 />
                 <p class="caption">FIRST: Official Explainer Video</p>
             </div>
@@ -91,7 +98,9 @@ import { YouTube } from "astro-embed";
                     </li>
                 </ul>
                 <br />
-                <a>Learn more about us, and how to join the team</a>
+                <a href="/info">
+                    Learn more about us, and how to join the team
+                </a>
             </div>
 
             <Timeline>
@@ -122,7 +131,6 @@ import { YouTube } from "astro-embed";
 <style>
     #hero {
         width: 100vw;
-        margin-left: calc(50% - 50vw);
         margin-top: -2rem;
 
         background-image:
@@ -134,20 +142,12 @@ import { YouTube } from "astro-embed";
         background-attachment: fixed;
 
         padding-top: 3rem;
-        padding-bottom: 4.6vw;
+        padding-bottom: 6vw;
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
     }
 
     .hero-content > img {
         justify-self: end;
-    }
-    .hero-inner {
-        max-width: 1250px;
-        margin: 0 auto;
-        padding: 0 1.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
     }
 
     /* Dark overlay for text contrast */
@@ -171,18 +171,17 @@ import { YouTube } from "astro-embed";
     .hero-inner {
         position: relative;
         z-index: 1;
-        max-width: 1250px;
+        max-width: calc(1230px + 2rem);
         margin: 0 auto;
-        padding: 0 1.5rem;
         display: flex;
         flex-direction: column;
+        padding: 0 2rem;
         gap: 2rem;
     }
 
     #hero-text {
         margin: auto 0;
         font-size: 1.3rem;
-        column-width: ;
     }
 
     #hero-text h1 {
@@ -191,5 +190,22 @@ import { YouTube } from "astro-embed";
 
     #hero-text h2 {
         margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .hero-inner {
+            padding: 0 1.75rem;
+        }
+
+        .hero-content > img {
+            order: -1; /* Puts the lion logo above the text on mobile */
+            justify-self: center;
+            max-width: 220px;
+            height: auto;
+        }
+
+        #hero-text {
+            text-align: center; /* Optional: looks cleaner centered under the logo */
+        }
     }
 </style>

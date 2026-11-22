@@ -8,7 +8,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <p>
             <strong>Lion Lanka (FRC #12560)</strong> is Sri Lanka's pioneering
             FIRST Robotics Competition team. Based at Elk Arc, Kotte, we bring
-            together highschool students from across the city to compete at the
+            together high school students from across the city to compete at the
             forefront of youth robotics, guided by industry mentors.
             <br />
             <br />
@@ -26,7 +26,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <p>
                     Intensive weekly sessions (~10-15 hrs/week). Exact schedule
                     is being finalised and will be updated here soon. Students
-                    are expected to come in as often as possible
+                    are expected to come in as often as possible.
                 </p>
             </div>
             <div class="info-card">
@@ -53,7 +53,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 id="map-embed"
             ></iframe>
             <p class="subtitle">
-                Elk Arc Machine Works 5 Baddegana Rd, Sri Jayawardenepura Kotte 10100
+                Elk Arc Machine Works 5 Baddegana Rd, Sri Jayawardenepura Kotte
+                10100
             </p>
         </div>
     </section>
@@ -75,7 +76,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     <i class="las la-wrench"></i> Mechanical
                 </h3>
                 <p>
-                    Constructing of the physical robot. With hands-on experience
+                    Constructing the physical robot. With hands-on experience
                     with 3D printing, CNC routers, and lathes, aspiring
                     engineers learn practical skills from day one.
                 </p>
@@ -123,5 +124,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     #map-embed {
         height: 17rem;
+    }
+
+    @media (max-width: 768px) {
+        #roles-grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
