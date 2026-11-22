@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { YouTube } from "astro-embed";
+
+import Timeline from "../components/timeline.astro";
+import TimelineItem from "../components/timeline-item.astro";
+---
+
+<BaseLayout>
+    <section id="hero">
+        <h1>What is FRC?</h1>
+        <div id="hero-content" class="two-col">
+            <div>
+                <p>
+                    FIRST Robotics Competition (FRC) is a worldwide high-school
+                    robotics tournament, where student-led teams compete in a
+                    new game yearly.
+                    <br />
+                    <br />
+                    Combining STEM education with sporting intensity, FRC
+                    empowers ambitious students to collaborate with peers, learn
+                    real-world skills, and tackle engineering under pressure.
+                </p>
+            </div>
+
+            <div class="subtitled-container">
+                <YouTube id="j8wz5vw5XfE" class="content-container" />
+                <p>Watch the 2026 Rebuilt world finals!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="season-timeline">
+        <h2>Throughout a Season</h2>
+        <Timeline>
+            <TimelineItem date="January" title="Kickoff">
+                <p>
+                    The 2027 Biocore season begins with a release video and game
+                    manual on the{" "}
+                    <a
+                        href="https://www.firstinspires.org/programs/frc/"
+                        target="_blank"
+                    >
+                        FIRST website
+                    </a>
+                    . With no prior knowledge, teams start strategising to win
+                    the game and prototyping initial mechanisms.
+                </p>
+            </TimelineItem>
+
+            <TimelineItem date="Jan – March" title="Build Season">
+                <p>
+                    Teams work intensely, often 20–30 hours per week. During the
+                    season, students design, manufacture, and program their 50
+                    kg robot for competition. Working alongside mentors, they
+                    build a battle-ready machine.
+                </p>
+            </TimelineItem>
+
+            <TimelineItem date="March – April" title="Competitions">
+                <p>
+                    Lion Lanka heads to the
+                    <strong> Southern Cross Regional</strong> in Sydney,
+                    Australia. In randomised alliances of three each match,
+                    teams coordinate strategy and compete on a basketball-court
+                    sized field. Regional winners are then selected to compete
+                    at the world finals in Texas, US.
+                </p>
+            </TimelineItem>
+
+            <TimelineItem date="April – Next Jan" title="Off Season" active>
+                <p>
+                    Until next kickoff, students learn new skills, improve their
+                    bot, prepare for recruitment, and run outreach. Teams
+                    reflect on their season and sometimes compete in off-season
+                    events.
+                </p>
+            </TimelineItem>
+        </Timeline>
+    </section>
+
+    <section id="get-involved">
+        <h2>Getting Involved</h2>
+        <div class="involvement-grid">
+            <div class="involvement-card">
+                <h3>
+                    <i class="las la-user-graduate"></i> Students
+                </h3>
+                <p>
+                    Ages 14-18. No prior robotics experience required, just curiosity and
+                    commitment.
+                </p>
+
+                <a>Apply to join →</a>
+            </div>
+            <div class="involvement-card">
+                <h3>
+                    <i class="las la-rocket"></i> Sponsors
+                </h3>
+                <p>
+                    Support Sri Lanka's next generation of engineers through
+                    funding, or other methods.
+                </p>
+
+                <a>Partner with us →</a>
+            </div>
+            <div class="involvement-card">
+                <h3>
+                    <i class="las la-chalkboard-teacher"></i> Mentors
+                </h3>
+                <p>
+                    Engineers, developers, and business professionals to guide
+                    students. Prior FRC experience is not required.
+                </p>
+
+                <a>Reach out to mentor →</a>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    #hero h1 {
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+
+    .involvement-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 5%;
+    }
+
+    .involvement-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border-left: 3px solid var(--steelazure);
+        padding: 0.5rem 1rem;
+        padding-right: 0;
+
+
+        justify-content: space-between;
+    }
+
+    .involvement-card p {
+        color: var(--text-muted);
+    }
+
+    .involvement-card a {
+        color: var(--cinnabar);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .involvement-card a:hover{
+        color: var(--cinnabar-hover)
+    }
+</style>
