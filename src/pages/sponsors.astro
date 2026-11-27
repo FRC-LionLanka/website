@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import { Image } from "astro:assets";
 import elkArcLogo from "../assets/elkarc.png";
+import surgeLogo from "../assets/surge.png";
 ---
 
 <BaseLayout>
@@ -23,8 +24,21 @@ import elkArcLogo from "../assets/elkarc.png";
             support in helping bring FIRST Robotics to Sri Lanka.
         </p>
         <div id="sponsors-grid">
-            <a class="sponsor-card">
+            <a
+                class="sponsor-card"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://facebook.com/elkarc"
+            >
                 <Image src={elkArcLogo} alt="Elk Arc Logo" />
+            </a>
+            <a
+                class="sponsor-card"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://surge.global"
+            >
+                <Image src={surgeLogo} alt="Surge Global Logo" />
             </a>
         </div>
     </section>
